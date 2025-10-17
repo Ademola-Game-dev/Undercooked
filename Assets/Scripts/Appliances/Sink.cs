@@ -16,10 +16,10 @@ namespace Undercooked.Appliances
     public class Sink : Interactable
     {
         [SerializeField] private Slider slider;
-        [SerializeField] private List<Transform> dirtySlots = new List<Transform>();
+        [SerializeField] private List<Transform> dirtySlots = new();
 
-        private readonly Stack<Plate> _cleanPlates = new Stack<Plate>();
-        private readonly Stack<Plate> _dirtyPlates = new Stack<Plate>();
+        private readonly Stack<Plate> _cleanPlates = new();
+        private readonly Stack<Plate> _dirtyPlates = new();
 
         private const float CleaningTime = 3f;
         private float _currentCleaningTime;
@@ -43,7 +43,7 @@ namespace Undercooked.Appliances
 
         public override bool TryToDropIntoSlot(IPickable pickableToDrop)
         {
-            if (!(pickableToDrop is Plate plate)) return false;
+            if (pickableToDrop is not Plate plate) return false;
             if (!plate.IsEmpty() || plate.IsClean) return false;
             AddPileDirtyPlatesRecursively(plate);
             return true;
@@ -54,7 +54,7 @@ namespace Undercooked.Appliances
         /// </summary>
         private void AddPileDirtyPlatesRecursively(Plate plate)
         {
-            Plate nextPlate = plate.Slot.GetComponentInChildren<Plate>();
+            var nextPlate = plate.Slot.GetComponentInChildren<Plate>();
             if (nextPlate != null)
             {
                 nextPlate.transform.SetParent(null);

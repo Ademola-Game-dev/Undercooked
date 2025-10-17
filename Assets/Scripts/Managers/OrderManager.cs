@@ -19,8 +19,8 @@ namespace Undercooked.Managers
         [SerializeField] private int maxConcurrentOrders = 5;
         [SerializeField] private OrdersPanelUI ordersPanelUI;
 
-        private readonly List<Order> _orders = new List<Order>();
-        private readonly Queue<Order> _poolOrders = new Queue<Order>();
+        private readonly List<Order> _orders = new();
+        private readonly Queue<Order> _poolOrders = new();
 
         private WaitForSeconds _intervalBetweenDropsWait;
         private bool _isGeneratorActive;

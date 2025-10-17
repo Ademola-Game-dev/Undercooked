@@ -15,11 +15,17 @@ namespace Undercooked.Appliances
         {
             if (CurrentPickable != null)
             {
-                if (CurrentPickable is CookingPot cookingPot) return cookingPot.TryToDropIntoSlot(pickableToDrop);
+                if (CurrentPickable is CookingPot cookingPot)
+                {
+                    return cookingPot.TryToDropIntoSlot(pickableToDrop);
+                }
                 return false;
             }
 
-            if (pickableToDrop is CookingPot cookingPot1) return TryDropIfNotOccupied(pickableToDrop);
+            if (pickableToDrop is CookingPot)
+            {
+                return TryDropIfNotOccupied(pickableToDrop);
+            }
             return false;
         }
 

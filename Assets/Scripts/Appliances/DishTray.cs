@@ -7,7 +7,7 @@ namespace Undercooked.Appliances
 {
     public class DishTray : Interactable
     {
-        private readonly List<Plate> _dirtyPlates = new List<Plate>();
+        private readonly List<Plate> _dirtyPlates = new();
 
         public override bool TryToDropIntoSlot(IPickable pickableToDrop) => false;
 

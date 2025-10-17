@@ -8,7 +8,7 @@ namespace Undercooked.Player
     public class InteractableController : MonoBehaviour
     {
         [SerializeField] private Transform playerPivot;
-        private readonly HashSet<Interactable> _interactables  = new HashSet<Interactable>();
+        private readonly HashSet<Interactable> _interactables  = new();
 
         private void Awake()
         {

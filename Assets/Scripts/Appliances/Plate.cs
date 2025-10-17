@@ -22,7 +22,7 @@ namespace Undercooked.Appliances
         private Material _soupMaterial;
         private Rigidbody _rigidbody;
         private Collider _collider;
-        private readonly List<Ingredient> _ingredients = new List<Ingredient>(MaxNumberIngredients);
+        private readonly List<Ingredient> _ingredients = new(MaxNumberIngredients);
 
         public bool IsClean { get; private set; } = true;
         public List<Ingredient> Ingredients => _ingredients;

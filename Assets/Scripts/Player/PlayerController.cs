@@ -36,8 +36,8 @@ namespace Undercooked.Player
         [SerializeField] private float dashForce = 900f;
         private bool _isDashing = false;
         private bool _isDashingPossible = true;
-        private readonly WaitForSeconds _dashDuration = new WaitForSeconds(0.17f);
-        private readonly WaitForSeconds _dashCooldown = new WaitForSeconds(0.07f);
+        private readonly WaitForSeconds _dashDuration = new(0.17f);
+        private readonly WaitForSeconds _dashCooldown = new(0.07f);
 
         [Header("Movement Settings")]
         [SerializeField] private float movementSpeed = 5f;
@@ -362,7 +362,7 @@ namespace Undercooked.Player
 
         private void TurnThePlayer()
         {
-            if (!(playerRigidbody.velocity.magnitude > 0.1f) || _inputDirection == Vector3.zero) return;
+            if ((playerRigidbody.velocity.magnitude <= 0.1f) || _inputDirection == Vector3.zero) return;
 
             Quaternion newRotation = Quaternion.LookRotation(_inputDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 15f);

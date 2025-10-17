@@ -62,7 +62,7 @@ namespace Undercooked.Appliances
         public bool IsCookFinished { get; private set; }
         public bool IsBurned { get; private set; }
         public bool IsEmpty() =>Ingredients.Count == 0;
-        public List<Ingredient> Ingredients { get; } = new List<Ingredient>(MaxNumberIngredients);
+        public List<Ingredient> Ingredients { get; } = new(MaxNumberIngredients);
 
         // [GameDesign]
         // if there is a mixed soup (e.g. 2x onions 1x tomato) we can't pickup the soup (it's locked),

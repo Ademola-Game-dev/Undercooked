@@ -17,7 +17,7 @@ namespace Undercooked.Model
 
         protected IPickable CurrentPickable { get; set; }
         protected PlayerController LastPlayerControllerInteracting;
-        private readonly List<MeshRenderer> _meshes = new List<MeshRenderer>();
+        private readonly List<MeshRenderer> _meshes = new();
         private MaterialPropertyBlock _materialBlock;
         private static readonly int Highlight = Shader.PropertyToID("Highlight_");
         
