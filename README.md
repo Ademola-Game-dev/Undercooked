@@ -33,7 +33,7 @@ More complexity arises from twists on the levels, like physically separating par
 Still, for this project, I set a clear goal to keep the scope small by building all the core mechanics to have a tight game loop using just one level.
 
 ## Tools
-[![Made with Unity](https://img.shields.io/badge/UNITY-2022.3.32f1-FFFFFF.svg?style=flat-square&logo=unity)](https://unity3d.com)
+[![Made with Unity](https://img.shields.io/badge/UNITY-6000.0.58f2-FFFFFF.svg?style=flat-square&logo=unity)](https://unity3d.com)
 
 Started with
 ![AutodeskMaya](https://img.shields.io/badge/AutoDesk-Maya-37A5CC.svg?style=flat-square&logo=AutodeskMaya)
