@@ -33,7 +33,8 @@ More complexity arises from twists on the levels, like physically separating par
 Still, for this project, I set a clear goal to keep the scope small by building all the core mechanics to have a tight game loop using just one level.
 
 ## Tools
-[![Made with Unity](https://img.shields.io/badge/UNITY-6000.0.58f2-FFFFFF.svg?style=flat-square&logo=unity)](https://unity3d.com)
+
+[![Made with Unity](https://img.shields.io/badge/UNITY-6000.3.3f1-FFFFFF.svg?style=flat-square&logo=unity)](https://unity3d.com)
 
 Started with
 ![AutodeskMaya](https://img.shields.io/badge/AutoDesk-Maya-37A5CC.svg?style=flat-square&logo=AutodeskMaya)
@@ -71,7 +72,7 @@ Switched to
 
 ## Auxiliary tools
 
-* Cameras powered by [CineMachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.6/manual/index.html)
+* Cameras powered by [CineMachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.10.5/manual/index.html)
 * UI animation using [LeanGUI](http://carloswilkes.com/Documentation/LeanGUI) and [LeanTransition](http://carloswilkes.com/Documentation/LeanTransition)
 * [FBX Exporter](https://docs.unity3d.com/Packages/com.unity.formats.fbx@2.0/manual/index.html) - makes it easy to send geometry and animation to any application that supports FBX and back again with minimal effort.
 
