@@ -241,7 +241,6 @@ namespace Undercooked.Player
 
             // Try to drop on the interactable. It may refuse it, e.g. dropping a plate into the CuttingBoard,
             // or simply it already have something on it
-            //Debug.Log($"[PlayerController] {_currentPickable.gameObject.name} trying to drop into {interactable.gameObject.name} ");
 
             bool dropSuccess = interactable.TryToDropIntoSlot(_currentPickable);
             if (!dropSuccess) return;

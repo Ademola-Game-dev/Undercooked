@@ -198,11 +198,11 @@ namespace Undercooked.Appliances
                         return false;
                     }
                     break;
-                case Ingredient ingredient:
-                    Debug.Log("[Plate] Trying to dropping Ingredient into Plate! Not implemented");
+                case Ingredient:
+                    // Dropping Ingredient into Plate is not allowed by design
                     break;
                 case Plate plate:
-                    //Debug.Log("[Plate] Trying to drop something from a plate into other plate! We basically swap contents");
+                    // Try drop something from a plate into other plate! Swap contents
                     if (this.IsEmpty() == false || this.IsClean == false) return false;
                     this.AddIngredients(plate.Ingredients);
                     plate.RemoveAllIngredients();
@@ -223,10 +223,10 @@ namespace Undercooked.Appliances
             switch (playerHoldPickable)
             {
                 // we just pick the soup ingredients, not the CookingPot itself
-                case CookingPot cookingPot:
-                    Debug.Log("[Plate] Trying to pick from a plate with a CookingPot", this);
+                case CookingPot:
+                    // Not allowed
                     break;
-                case Ingredient ingredient:
+                case Ingredient:
                     //TODO: we can pickup some ingredients into plate, not all of them.
                     break;
                 // swap plate ingredients

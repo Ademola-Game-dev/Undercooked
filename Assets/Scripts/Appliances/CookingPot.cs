@@ -169,7 +169,6 @@ namespace Undercooked.Appliances
                 Ingredients[1].Type != Ingredients[2].Type ||
                 Ingredients[0].Type != Ingredients[2].Type)
             {
-                // Debug.Log("[CookingPot] Soup with mixed ingredients! You must thrash it away! What a waste!");
                 return null;
             }
 
@@ -301,8 +300,6 @@ namespace Undercooked.Appliances
                 yield break;
             }
 
-            // Debug.Log("[CookingPot] Finish partial cooking");
-            
             _burnCoroutine = StartCoroutine(Burn());
         }
 
